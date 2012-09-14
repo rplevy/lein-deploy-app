@@ -21,7 +21,7 @@ project.clj.
 2. Add a project.clj configuration mapping for deploy-app:
 ```clojure
   :deploy-app {:s3-bucket "s3p://mybucket/releases/"
-               :creds :gpg}
+               :creds :env}
 ```
 
 :s3-bucket is the bucket/path where you want to deploy your uberjars.
