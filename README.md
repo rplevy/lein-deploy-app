@@ -30,10 +30,16 @@ project.clj.
 If using :env, specify your s3 credentials using the environment variables
 LEIN_USERNAME and LEIN_PASSWORD.
 
-To deploy your application's uberjar to s3:
+To deploy your application's uberjar to s3 for the current git branch:
 
 ```bash
-  $ lein deploy-app [--branch <NAME>] # current git branch if not specified
+  $ lein deploy-app
+```
+
+To specify something other than a current git branch:
+
+```bash
+  $ lein deploy-app --branch <NAME>
 ```
 
 ## To Do
