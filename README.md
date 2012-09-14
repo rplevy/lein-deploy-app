@@ -1,12 +1,11 @@
 # lein-deploy-app
 
-A Leiningen plugin to push application uberjars to an s3 bucket.
+A Leiningen plugin to push application uberjars to a simple directory structure
+in an s3 bucket, organized by application and branch.
 
-Differences between lein-deploy-app and s3-wagon or lein-deploy-uberjar:
-whereas s3-wagon enables deploying libs to a Maven repo in s3, and
-lein-deploy-uberjar enables deploying an application uberjar to Maven,
-lein-deploy-app deploys the application uberjar to a simple non-Maven
-directory structure. A key advantage is that the jars are grouped by branch.
+This plugin is similar to s3-wagon in that you configure your project to deploy
+to s3, but lein-deploy-app is for deploying app uberjars as opposed to libs,
+and does not store the uberjars in a Maven repo (as lein-deploy-uberjar does).
 
 A workflow involving lein-deploy-app might involve a ci server or an engineer
 calling lein deploy-app. Then a systems integration framework like Chef can
