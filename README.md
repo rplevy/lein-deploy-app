@@ -15,7 +15,7 @@ or production environment.
 
 ## Usage
 
-1. Put `[lein-deploy-app "0.2.0"]` into the `:plugins` vector of your
+1. Put `[lein-deploy-app "0.1.0"]` into the `:plugins` vector of your
 project.clj.
 
 2. Add a project.clj configuration mapping for deploy-app:
