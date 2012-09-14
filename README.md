@@ -1,6 +1,6 @@
 # lein-deploy-app
 
-A Leiningen plugin to push application uberjars to a s3.
+A Leiningen plugin to push application uberjars to an s3 bucket.
 
 Differences between lein-deploy-app and s3-wagon or lein-deploy-uberjar:
 whereas s3-wagon enables deploying libs to a Maven repo in s3, and
@@ -25,8 +25,11 @@ project.clj.
 ## To Do
 
 [ ] specify bucket in project.clj file
+
 [ ] use git branch in working dir
+
   [ ] optionally specify name of branch
+
 [ ] upload uberjar for the current project version
     to BUCKET/app/branch/app-uberjar-ver.jar
 
