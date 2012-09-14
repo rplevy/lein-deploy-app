@@ -36,7 +36,7 @@ To deploy your application's uberjar to s3 for the current git branch:
   $ lein deploy-app
 ```
 
-To specify something other label instead of current git branch as "branch":
+To specify some other label instead of current git branch as "branch":
 
 ```bash
   $ lein deploy-app --branch <NAME>
