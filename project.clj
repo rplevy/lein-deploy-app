@@ -1,4 +1,4 @@
-(defproject lein-deploy-app "0.1.0"
+(defproject lein-deploy-app "0.1.1"
   :description "A Leiningen plugin to push application uberjars to AWS s3"
   :url "https://clojars.org/lein-deploy-app"
   :dependencies [[org.clojure/clojure "1.4.0"]
