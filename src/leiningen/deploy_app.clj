@@ -5,12 +5,6 @@
             [leiningen.uberjar :as uj]
             [clojure.java.io :as io]))
 
-(defn current-branch
-  "get the current branch of a git repo"
-  [repo-path]
-  (jgit/with-repo repo-path
-    (-> repo .getRepository .getFullBranch (str/replace #"^refs/heads/" ""))))
-
 (defn aws-creds [cred-type]
   (condp = cred-type
     :env {:access-key (System/getenv "LEIN_USERNAME")
@@ -28,7 +22,7 @@
   "Build uberjar and deploy to s3"
   [project & args]
   (let [branch (or ((apply hash-map args) "--branch")
-                   (current-branch "."))
+                   (jgit/with-repo "." (jgit/git-branch-current repo)))
         cred (aws-creds (:creds (:deploy-app project)))
         [bucket path] (-> (:s3-bucket (:deploy-app project))
                           (str/replace #"^s3p://" "")
