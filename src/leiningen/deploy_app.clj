@@ -3,6 +3,7 @@
             [clj-jgit.porcelain :as jgit]
             [aws.sdk.s3 :as s3]
             [leiningen.uberjar :as uj]
+            [me.raynes.fs :as fs]
             [clojure.java.io :as io]))
 
 (defn aws-creds [cred-type]
@@ -35,4 +36,5 @@
       (println (format "Deploying uberjar %s for branch %s to s3p://%s/%s..."
                        uj-path branch bucket key))
       (with-open [instr (io/input-stream uj-path)]
-        (s3/put-object cred bucket key instr)))))
+        (s3/put-object cred bucket key instr
+                       {:content-length (fs/size uj-path)})))))
