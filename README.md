@@ -15,7 +15,7 @@ or production environment.
 
 ## Usage
 
-1. Put `[lein-deploy-app "0.1.0"]` into the `:plugins` vector of your
+1. Put `[rplevy/lein-deploy-app "0.2.1"]` into the `:plugins` vector of your
 project.clj.
 
 2. Add a project.clj configuration mapping for deploy-app:
@@ -57,6 +57,7 @@ credentials.clj file of the following form:
 
 Author: Robert Levy / @rplevy-draker
 
+Copyright © 2013 Robert P. Levy
 Copyright © 2012 Draker, Inc.
 
 Distributed under the Eclipse Public License, the same as Clojure.
