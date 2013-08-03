@@ -55,8 +55,6 @@ credentials.clj file of the following form:
 
 ## License
 
-Author: Robert Levy / @rplevy-draker
-
 Copyright © 2013 Robert P. Levy
 
 Copyright © 2012 Draker, Inc.
